@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>요양병원 평가 — 서울 1등급 (24곳)</title>
+<style>
+  :root{ --line:#e3e6ea; --head:#1f3b57; --accent:#2563eb; --good:#0a8a3c; --bad:#c0392b; --warn:#b8860b; }
+  *{ box-sizing:border-box; }
+  body{ font-family:-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Malgun Gothic",sans-serif; margin:0; padding:32px 20px; color:#1a1a1a; background:#f7f8fa; }
+  h1{ font-size:22px; margin:0 0 4px; }
+  h2{ font-size:18px; margin:34px 0 8px; padding-top:6px; border-top:2px solid var(--head); }
+  .sub{ color:#666; font-size:13px; margin-bottom:6px; }
+  .src{ font-size:12px; margin:6px 0; }
+  .src a{ color:var(--accent); }
+  .legend{ font-size:12px; color:#555; background:#eef2f7; border:1px solid var(--line); border-radius:6px; padding:8px 12px; margin:14px 0; line-height:1.6; }
+  .wrap{ overflow-x:auto; border:1px solid var(--line); border-radius:8px; background:#fff; }
+  table{ border-collapse:collapse; width:100%; font-size:13px; min-width:980px; }
+  thead th{ background:var(--head); color:#fff; font-weight:600; padding:10px 8px; text-align:center; position:sticky; top:0; white-space:nowrap; }
+  th.sortable{ cursor:pointer; user-select:none; }
+  th.sortable:hover{ background:#2a4f73; }
+  th.sortable .arrow{ display:inline-block; width:12px; margin-left:3px; font-size:11px; opacity:.55; }
+  th.sortable.asc .arrow::after{ content:"▲"; opacity:1; }
+  th.sortable.desc .arrow::after{ content:"▼"; opacity:1; }
+  th.sortable .arrow::after{ content:"↕"; }
+  tbody td{ padding:8px; border-bottom:1px solid var(--line); vertical-align:top; }
+  tbody tr:nth-child(even){ background:#fafbfc; }
+  tbody tr:hover{ background:#eef5ff; }
+  .name{ font-weight:600; white-space:nowrap; }
+  .gu{ color:#555; white-space:nowrap; text-align:center; }
+  .num{ text-align:center; font-variant-numeric:tabular-nums; white-space:nowrap; }
+  .doc{ white-space:nowrap; }
+  .spec{ font-size:12px; color:#333; line-height:1.5; min-width:280px; }
+  .spec b{ color:var(--accent); }
+  .better{ color:var(--good); font-weight:600; }
+  .worse{ color:var(--bad); }
+  .avg td{ background:#fff7e6; font-weight:600; }
+  caption{ caption-side:bottom; text-align:left; font-size:11px; color:#888; padding:8px 4px; line-height:1.6; }
+  a.naver{ display:inline-block; background:#03c75a; color:#fff; text-decoration:none; font-weight:600; font-size:12px; padding:3px 8px; border-radius:4px; white-space:nowrap; }
+  a.naver:hover{ background:#02a64b; }
+  .pos{ color:var(--good); font-size:12px; line-height:1.5; }
+  .neg{ color:var(--bad); font-size:12px; line-height:1.5; }
+  .verdict{ font-weight:700; text-align:center; white-space:nowrap; font-size:12px; }
+  .v2{ color:#0a8a3c; }       /* 매우 긍정 */
+  .v1{ color:#3a9d5d; }       /* 긍정 */
+  .v0{ color:var(--warn); }   /* 보통/혼재 */
+  .rv{ min-width:240px; }
+</style>
+</head>
+<body>
+  <h1>요양병원 평가 — 서울 1등급 병원 (24곳)</h1>
+  <div class="sub">평가항목: 요양병원 · 지역: 서울 · 등급: 1등급 · 24곳 모두 의료기관 인증 획득</div>
+  <div class="src">
+    출처 ① 평가·인력 정보: 건강보험심사평가원(HIRA) 병원평가 검색 —
+    <a href="https://www.hira.or.kr/ra/eval/getDiagEvlList.do?pgmid=HIRAA030004000100#none" target="_blank">https://www.hira.or.kr/ra/eval/getDiagEvlList.do?pgmid=HIRAA030004000100#none</a><br>
+    출처 ② 리뷰 요약: 네이버 지도(NAVER Place) 방문자 리뷰 —
+    <a href="https://map.naver.com/" target="_blank">https://map.naver.com/</a>
+  </div>
+
+  <h2>1. 병원 정보 · 인력 지표</h2>
+  <div class="legend">
+    <b>1인당 환자수</b>는 해당 인력 1인이 1일 돌보는 환자수로 <b>낮을수록 좋음</b>.
+    전체평균 — 의사 28.7 / 간호사 9.4 / 간호인력 4.0명.
+    진료과목별 전문의수는 <b>전문의 1명 이상</b> 보유 과목만 표기.
+  </div>
+  <div class="wrap">
+  <table>
+    <thead>
+      <tr>
+        <th>#</th><th>병원명</th><th>구</th><th>의사수(총)</th>
+        <th>진료과목별 전문의수 (≥1)</th>
+        <th class="sortable" data-col="5">의사 1인당<span class="arrow"></span></th>
+        <th class="sortable" data-col="6">간호사 1인당<span class="arrow"></span></th>
+        <th class="sortable" data-col="7">간호인력 1인당<span class="arrow"></span></th>
+        <th>네이버</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td class="num">1</td><td class="name">강북휴요양병원</td><td class="gu">강북구</td><td class="doc">5명 (의사 3·한의사 2)</td><td class="spec">정형외과 1, 가정의학과 1</td><td class="num">28.1</td><td class="num">8.4</td><td class="num">3.9</td><td class="num"><a class="naver" href="https://map.naver.com/p/entry/place/1102937442" target="_blank">지도</a></td></tr>
+      <tr><td class="num">2</td><td class="name">네이처요양병원</td><td class="gu">강남구</td><td class="doc">6명 (의사 4·한의사 2)</td><td class="spec">내과 1, 신경과 1, 재활의학과 1, 가정의학과 1, 한방재활의학과 1</td><td class="num">16.4</td><td class="num">3.9</td><td class="num">2.8</td><td class="num"><a class="naver" href="https://map.naver.com/p/entry/place/1455384720" target="_blank">지도</a></td></tr>
+      <tr><td class="num">3</td><td class="name">더세인트요양병원</td><td class="gu">구로구</td><td class="doc">10명 (의사 9·한의사 1)</td><td class="spec">내과 5, 외과 1, 마취통증의학과 1, 재활의학과 1, 가정의학과 1</td><td class="num">26.6</td><td class="num">6.3</td><td class="num">3.2</td><td class="num"><a class="naver" href="https://map.naver.com/p/entry/place/1094780916" target="_blank">지도</a></td></tr>
+      <tr><td class="num">4</td><td class="name">로하스참사랑요양병원</td><td class="gu">영등포구</td><td class="doc">3명 (의사 2·한의사 1)</td><td class="spec">내과 1, 심장혈관흉부외과 1</td><td class="num">29.0</td><td class="num">6.2</td><td class="num">4.3</td><td class="num"><a class="naver" href="https://map.naver.com/p/entry/place/11558744" target="_blank">지도</a></td></tr>
+      <tr><td class="num">5</td><td class="name">마리아성모요양병원</td><td class="gu">영등포구</td><td class="doc">7명 (의사 4·한의사 3)</td><td class="spec">마취통증의학과 1</td><td class="num">28.3</td><td class="num">8.3</td><td class="num">3.3</td><td class="num"><a class="naver" href="https://map.naver.com/p/entry/place/1845048148" target="_blank">지도</a></td></tr>
+      <tr><td class="num">6</td><td class="name">마포요양병원</td><td class="gu">마포구</td><td class="doc">6명 (의사 4·치과 1·한의사 1)</td><td class="spec">내과 1, 재활의학과 2</td><td class="num">22.8</td><td class="num">5.6</td><td class="num">3.8</td><td class="num"><a class="naver" href="https://map.naver.com/p/entry/place/1573128775" target="_blank">지도</a></td></tr>
+      <tr><td class="num">7</td><td class="name">보문효사랑요양병원</td><td class="gu">성북구</td><td class="doc">5명 (의사 3·한의사 2)</td><td class="spec">내과 2, 재활의학과 1</td><td class="num">26.5</td><td class="num">6.4</td><td class="num">3.7</td><td class="num"><a class="naver" href="https://map.naver.com/p/entry/place/1531173047" target="_blank">지도</a></td></tr>
+      <tr><td class="num">8</td><td class="name">북서울요양병원</td><td class="gu">강북구</td><td class="doc">5명 (의사 3·한의사 2)</td><td class="spec">예방의학과 1</td><td class="num">26.4</td><td class="num">7.8</td><td class="num">4.2</td><td class="num"><a class="naver" href="https://map.naver.com/p/entry/place/1743574528" target="_blank">지도</a></td></tr>
+      <tr><td class="num">9</td><td class="name">새마음요양병원</td><td class="gu">성북구</td><td class="doc">6명 (의사 4·한의사 2)</td><td class="spec">외과 1, 재활의학과 1</td><td class="num">24.4</td><td class="num">9.2</td><td class="num">3.8</td><td class="num"><a class="naver" href="https://map.naver.com/p/entry/place/35483553" target="_blank">지도</a></td></tr>
+      <tr><td class="num">10</td><td class="name">서울삼성요양병원</td><td class="gu">영등포구</td><td class="doc">9명 (의사 5·한의사 4)</td><td class="spec">내과 2, 신경외과 1, 재활의학과 1, 가정의학과 1, 한방내과 1, 침구과 1</td><td class="num">26.1</td><td class="num">7.2</td><td class="num">3.5</td><td class="num"><a class="naver" href="https://map.naver.com/p/entry/place/1648030272" target="_blank">지도</a></td></tr>
+      <tr><td class="num">11</td><td class="name">서울에이스요양병원</td><td class="gu">동대문구</td><td class="doc">7명 (의사 4·한의사 3)</td><td class="spec">내과 1, 신경과 1, 재활의학과 1, 가정의학과 1</td><td class="num">28.4</td><td class="num">6.2</td><td class="num">4.3</td><td class="num"><a class="naver" href="https://map.naver.com/p/entry/place/37116403" target="_blank">지도</a></td></tr>
+      <tr><td class="num">12</td><td class="name">서울현대요양병원</td><td class="gu">강동구</td><td class="doc">9명 (의사 8·한의사 1)</td><td class="spec">내과 3, 신경과 1, 재활의학과 2, 가정의학과 1</td><td class="num">28.4</td><td class="num">5.4</td><td class="num">3.7</td><td class="num"><a class="naver" href="https://map.naver.com/p/entry/place/961408556" target="_blank">지도</a></td></tr>
+      <tr><td class="num">13</td><td class="name">서초프라임요양병원</td><td class="gu">서초구</td><td class="doc">6명 (의사 4·한의사 2)</td><td class="spec">내과 1, 신경과 1, 재활의학과 1, 가정의학과 1</td><td class="num">27.0</td><td class="num">5.6</td><td class="num">3.8</td><td class="num"><a class="naver" href="https://map.naver.com/p/entry/place/1905265118" target="_blank">지도</a></td></tr>
+      <tr><td class="num">14</td><td class="name">성북서울요양병원</td><td class="gu">성북구</td><td class="doc">9명 (의사 8·한의사 1)</td><td class="spec">내과 1, 외과 2, 정형외과 1, 심장혈관흉부외과 1, 재활의학과 1, 가정의학과 1</td><td class="num">26.7</td><td class="num">8.3</td><td class="num">4.1</td><td class="num"><a class="naver" href="https://map.naver.com/p/entry/place/1680263655" target="_blank">지도</a></td></tr>
+      <tr><td class="num">15</td><td class="name">오케이요양병원</td><td class="gu">구로구</td><td class="doc">5명 (의사 3·한의사 2)</td><td class="spec">내과 1, 재활의학과 1, 한방내과 1</td><td class="num">30.0</td><td class="num">7.7</td><td class="num">3.9</td><td class="num"><a class="naver" href="https://map.naver.com/p/entry/place/1771062313" target="_blank">지도</a></td></tr>
+      <tr><td class="num">16</td><td class="name">은평요양병원</td><td class="gu">은평구</td><td class="doc">5명 (의사 3·한의사 2)</td><td class="spec">외과 1, 가정의학과 2</td><td class="num">28.8</td><td class="num">7.5</td><td class="num">3.6</td><td class="num"><a class="naver" href="https://map.naver.com/p/entry/place/1027886549" target="_blank">지도</a></td></tr>
+      <tr><td class="num">17</td><td class="name">의료법인 미소들노인전문병원</td><td class="gu">구로구</td><td class="doc">13명 (의사 11·한의사 2)</td><td class="spec">내과 3, 신경과 2, 성형외과 1, 재활의학과 2, 가정의학과 1</td><td class="num">18.7</td><td class="num">6.3</td><td class="num">2.9</td><td class="num"><a class="naver" href="https://map.naver.com/p/entry/place/12770748" target="_blank">지도</a></td></tr>
+      <tr><td class="num">18</td><td class="name">의료법인 부원의료재단 서초요양병원</td><td class="gu">서초구</td><td class="doc">3명 (의사 2·한의사 1)</td><td class="spec">외과 1, 진단검사의학과 1</td><td class="num">27.0</td><td class="num">8.1</td><td class="num">4.2</td><td class="num"><a class="naver" href="https://map.naver.com/p/entry/place/12854448" target="_blank">지도</a></td></tr>
+      <tr><td class="num">19</td><td class="name">의료법인 행복나눔의료재단 사랑요양병원</td><td class="gu">노원구</td><td class="doc">5명 (의사 3·한의사 2)</td><td class="spec">외과 1</td><td class="num">27.7</td><td class="num">8.6</td><td class="num">3.9</td><td class="num"><a class="naver" href="https://map.naver.com/p/entry/place/232424800" target="_blank">지도</a></td></tr>
+      <tr><td class="num">20</td><td class="name">편안한요양병원</td><td class="gu">광진구</td><td class="doc">8명 (의사 5·한의사 3)</td><td class="spec">내과 1, 외과 1, 재활의학과 1, 가정의학과 2, 한방내과 1, 한방재활의학과 1</td><td class="num">29.7</td><td class="num">8.3</td><td class="num">3.8</td><td class="num"><a class="naver" href="https://map.naver.com/p/entry/place/1679238637" target="_blank">지도</a></td></tr>
+      <tr><td class="num">21</td><td class="name">하나효요양병원</td><td class="gu">은평구</td><td class="doc">6명 (의사 5·한의사 1)</td><td class="spec">정신건강의학과 1, 신경외과 1, 재활의학과 1, 가정의학과 1</td><td class="num">25.0</td><td class="num">5.7</td><td class="num">3.9</td><td class="num"><a class="naver" href="https://map.naver.com/p/entry/place/11876466" target="_blank">지도</a></td></tr>
+      <tr><td class="num">22</td><td class="name">한걸음요양병원</td><td class="gu">중랑구</td><td class="doc">6명 (의사 5·한의사 1)</td><td class="spec">내과 2, 정형외과 1, 재활의학과 1</td><td class="num">29.5</td><td class="num">8.0</td><td class="num">4.2</td><td class="num"><a class="naver" href="https://map.naver.com/p/entry/place/12058371" target="_blank">지도</a></td></tr>
+      <tr><td class="num">23</td><td class="name">효림요양병원</td><td class="gu">동대문구</td><td class="doc">7명 (의사 5·한의사 2)</td><td class="spec">내과 2, 영상의학과 1, 가정의학과 2</td><td class="num">24.2</td><td class="num">6.6</td><td class="num">3.5</td><td class="num"><a class="naver" href="https://map.naver.com/p/entry/place/13472069" target="_blank">지도</a></td></tr>
+      <tr><td class="num">24</td><td class="name">희망요양병원</td><td class="gu">노원구</td><td class="doc">2명 (의사 2)</td><td class="spec">외과 1</td><td class="num">25.3</td><td class="num">8.4</td><td class="num">3.8</td><td class="num"><a class="naver" href="https://map.naver.com/p/entry/place/19528587" target="_blank">지도</a></td></tr>
+      <tr class="avg"><td class="num" colspan="5" style="text-align:right">전체평균 (요양병원 전체 기준) →</td><td class="num">28.7</td><td class="num">9.4</td><td class="num">4.0</td><td></td></tr>
+    </tbody>
+    <caption>
+      ※ '진료과목별 전문의수'는 전문의 0명 과목을 생략한 요약입니다. 의사수의 '의사'는 전문의·일반의 포함 의과 의사 인원입니다.<br>
+      ※ 1인당 환자수는 결과값이 낮을수록 인력이 여유로움을 의미합니다.
+    </caption>
+  </table>
+  </div>
+
+  <h2>2. 네이버 지도 리뷰 요약 (긍정 / 부정 / 보통)</h2>
+  <div class="legend">
+    네이버 지도 <b>방문자 리뷰</b>를 최신순으로 표본 추출해 요약했습니다(전체 리뷰가 아닌 표시 가능 리뷰 기준).
+    종합판정 — <span class="v2">매우 긍정</span> / <span class="v1">긍정</span> / <span class="v0">보통·혼재</span>.
+    요양병원 리뷰는 '굿/친절' 등 짧은 호평이 많아 전반적으로 긍정 편향이 있을 수 있습니다.
+  </div>
+  <div class="wrap">
+  <table>
+    <thead>
+      <tr><th>#</th><th>병원명</th><th>방문자/블로그</th><th>종합판정</th><th>긍정 포인트</th><th>부정·아쉬운 점</th><th>네이버</th></tr>
+    </thead>
+    <tbody>
+      <tr><td class="num">1</td><td class="name">강북휴요양병원</td><td class="num">38 / 6</td><td class="verdict v1">긍정<br>(일부 부정)</td><td class="pos">'굿'·'👍'·"모두 친절" 등 호평 다수</td><td class="neg">"간병인(남) 최악, 거동 힘든 분 비추", "별루" 1건</td><td class="num"><a class="naver" href="https://map.naver.com/p/entry/place/1102937442" target="_blank">지도</a></td></tr>
+      <tr><td class="num">2</td><td class="name">네이처요양병원</td><td class="num">46 / 84</td><td class="verdict v2">매우 긍정</td><td class="pos">친절·깨끗·시설 만족, 장기입원 후 쾌차·추천, 간호진 정성 칭찬</td><td class="neg">엘리베이터 느림, 코로나키트 비용, 보험서류 보호자 직접</td><td class="num"><a class="naver" href="https://map.naver.com/p/entry/place/1455384720" target="_blank">지도</a></td></tr>
+      <tr><td class="num">3</td><td class="name">더세인트요양병원</td><td class="num">80 / 7</td><td class="verdict v0">보통<br>(표본 적음)</td><td class="pos">"요양원 아닌 요양병원에 모실 수 있어 다행"</td><td class="neg">간병+병원비 월 약 710만원 부담, 주차직원 응대 변동</td><td class="num"><a class="naver" href="https://map.naver.com/p/entry/place/1094780916" target="_blank">지도</a></td></tr>
+      <tr><td class="num">4</td><td class="name">로하스참사랑요양병원</td><td class="num">39 / 15</td><td class="verdict v1">긍정</td><td class="pos">"친절해요" 반복, 좋아요, 집 근처 편함, 입원 후 호전</td><td class="neg">특이 부정 없음</td><td class="num"><a class="naver" href="https://map.naver.com/p/entry/place/11558744" target="_blank">지도</a></td></tr>
+      <tr><td class="num">5</td><td class="name">마리아성모요양병원</td><td class="num">52 / 38</td><td class="verdict v0">보통<br>(혼재)</td><td class="pos">깨끗·친절·상담 편함, 문의 빠른 처리, 방역 양호</td><td class="neg">"7층 간호사 불친절·물품 안챙김", "불친절해요"</td><td class="num"><a class="naver" href="https://map.naver.com/p/entry/place/1845048148" target="_blank">지도</a></td></tr>
+      <tr><td class="num">6</td><td class="name">마포요양병원</td><td class="num">65 / 971</td><td class="verdict v1">긍정</td><td class="pos">간병·재활 케어 만족, 면회 안내 친절, 강추, 야외환경</td><td class="neg">"별로" 1건, 간판이 잘 안 보임</td><td class="num"><a class="naver" href="https://map.naver.com/p/entry/place/1573128775" target="_blank">지도</a></td></tr>
+      <tr><td class="num">7</td><td class="name">보문효사랑요양병원</td><td class="num">24 / 14</td><td class="verdict v1">긍정</td><td class="pos">친절·빠른 처리, '굿' 다수</td><td class="neg">"화장실 1개를 12명이 공용" 불편</td><td class="num"><a class="naver" href="https://map.naver.com/p/entry/place/1531173047" target="_blank">지도</a></td></tr>
+      <tr><td class="num">8</td><td class="name">북서울요양병원</td><td class="num">76 / 348</td><td class="verdict v2">매우 긍정</td><td class="pos">욕창·통증·영양 관리 우수, 응급 빠른 대응, 시설 깔끔·넓음, 친절</td><td class="neg">특이 부정 없음</td><td class="num"><a class="naver" href="https://map.naver.com/p/entry/place/1743574528" target="_blank">지도</a></td></tr>
+      <tr><td class="num">9</td><td class="name">새마음요양병원</td><td class="num">42 / 15</td><td class="verdict v1">긍정</td><td class="pos">간병 착하고 꼼꼼, 가족같이 케어, 환하고 햇볕 좋은 병실, 친절</td><td class="neg">특이 부정 없음</td><td class="num"><a class="naver" href="https://map.naver.com/p/entry/place/35483553" target="_blank">지도</a></td></tr>
+      <tr><td class="num">10</td><td class="name">서울삼성요양병원</td><td class="num">95 / 9</td><td class="verdict v2">매우 긍정</td><td class="pos">리모델링 후 깨끗·쾌적, 친절, 식사 만족, 의사 설명 좋음, 추천</td><td class="neg">"비싸요" 1건</td><td class="num"><a class="naver" href="https://map.naver.com/p/entry/place/1648030272" target="_blank">지도</a></td></tr>
+      <tr><td class="num">11</td><td class="name">서울에이스요양병원</td><td class="num">65 / 175</td><td class="verdict v1">긍정</td><td class="pos">시설 깔끔, 재활 프로그램 좋음, 세심한 케어·설명, 교통 편리, 추천</td><td class="neg">"일부 간호사·간병인이 딱딱함"</td><td class="num"><a class="naver" href="https://map.naver.com/p/entry/place/37116403" target="_blank">지도</a></td></tr>
+      <tr><td class="num">12</td><td class="name">서울현대요양병원</td><td class="num">169 / 38</td><td class="verdict v2">매우 긍정</td><td class="pos">"만족합니다" 다수, 병실 분위기 좋음, 직원·간호진 따뜻·친절, 추천</td><td class="neg">특이 부정 없음</td><td class="num"><a class="naver" href="https://map.naver.com/p/entry/place/961408556" target="_blank">지도</a></td></tr>
+      <tr><td class="num">13</td><td class="name">서초프라임요양병원</td><td class="num">59 / 808</td><td class="verdict v2">매우 긍정</td><td class="pos">재활·도수치료 효과 큼, 원인 설명 친절, 한방 병행, 만족·최고</td><td class="neg">특이 부정 없음(재활센터 리뷰 비중 높음)</td><td class="num"><a class="naver" href="https://map.naver.com/p/entry/place/1905265118" target="_blank">지도</a></td></tr>
+      <tr><td class="num">14</td><td class="name">성북서울요양병원</td><td class="num">117 / 14</td><td class="verdict v1">긍정<br>(주의 1건)</td><td class="pos">상담 친절·자세, 세심한 돌봄, 회복, 시설 깔끔, 추천</td><td class="neg">강한 부정 1건: "리뷰 삭제 의심, CRE병동 비추, 입원 후 악화"</td><td class="num"><a class="naver" href="https://map.naver.com/p/entry/place/1680263655" target="_blank">지도</a></td></tr>
+      <tr><td class="num">15</td><td class="name">오케이요양병원</td><td class="num">82 / 15</td><td class="verdict v1">긍정</td><td class="pos">친절·'굿'·좋아요, 시설 깨끗, 8개월 잘 지냄</td><td class="neg">특이 부정 없음</td><td class="num"><a class="naver" href="https://map.naver.com/p/entry/place/1771062313" target="_blank">지도</a></td></tr>
+      <tr><td class="num">16</td><td class="name">은평요양병원</td><td class="num">202 / 81</td><td class="verdict v2">매우 긍정</td><td class="pos">친절·믿음, 차분한 분위기, 주차 넓음, 휴일 상담 가능, 추천</td><td class="neg">특이 부정 없음</td><td class="num"><a class="naver" href="https://map.naver.com/p/entry/place/1027886549" target="_blank">지도</a></td></tr>
+      <tr><td class="num">17</td><td class="name">미소들노인전문병원</td><td class="num">131 / 273</td><td class="verdict v2">매우 긍정</td><td class="pos">욕창치료·재활 우수(체계적), 친절·세심, 산책로, 휴게공간, 추천</td><td class="neg">특이 부정 없음</td><td class="num"><a class="naver" href="https://map.naver.com/p/entry/place/12770748" target="_blank">지도</a></td></tr>
+      <tr><td class="num">18</td><td class="name">부원의료재단 서초요양병원</td><td class="num">14 / 9</td><td class="verdict v1">긍정<br>(표본 적음)</td><td class="pos">"친절"·'굿'·좋아요</td><td class="neg">특이 부정 없음</td><td class="num"><a class="naver" href="https://map.naver.com/p/entry/place/12854448" target="_blank">지도</a></td></tr>
+      <tr><td class="num">19</td><td class="name">행복나눔 사랑요양병원</td><td class="num">42 / 6</td><td class="verdict v1">긍정</td><td class="pos">직원 모두 친절·신경 써줌, 영상통화 자주, 주차·교통 편리</td><td class="neg">특이 부정 없음</td><td class="num"><a class="naver" href="https://map.naver.com/p/entry/place/232424800" target="_blank">지도</a></td></tr>
+      <tr><td class="num">20</td><td class="name">편안한요양병원</td><td class="num">128 / 299</td><td class="verdict v1">긍정<br>(주의 1건)</td><td class="pos">친절·시설 깔끔, 면회 자유로움, 재활쌤 친절, 상태 자주 확인</td><td class="neg">강한 부정 1건: "담당의사 마지막 행동에 상처, 추천 안 함"</td><td class="num"><a class="naver" href="https://map.naver.com/p/entry/place/1679238637" target="_blank">지도</a></td></tr>
+      <tr><td class="num">21</td><td class="name">하나효요양병원</td><td class="num">144 / 31</td><td class="verdict v1">긍정<br>(일부 부정)</td><td class="pos">직원 친절, 2년째 가족처럼 케어, 면회 시 가장 친절</td><td class="neg">"일부 간호조무사가 치매 어르신에게 반말·무례" 지적</td><td class="num"><a class="naver" href="https://map.naver.com/p/entry/place/11876466" target="_blank">지도</a></td></tr>
+      <tr><td class="num">22</td><td class="name">한걸음요양병원</td><td class="num">44 / 17</td><td class="verdict v1">긍정</td><td class="pos">친절 다수, 교통 좋음, '굿'</td><td class="neg">"이용기간 동안 별로였다" 1건</td><td class="num"><a class="naver" href="https://map.naver.com/p/entry/place/12058371" target="_blank">지도</a></td></tr>
+      <tr><td class="num">23</td><td class="name">효림요양병원</td><td class="num">26 / 56</td><td class="verdict v1">긍정</td><td class="pos">원무과 친절, 안내·설명 잘함, '굿'·'👍'</td><td class="neg">"병원이 오래돼 시설이 좀…"</td><td class="num"><a class="naver" href="https://map.naver.com/p/entry/place/13472069" target="_blank">지도</a></td></tr>
+      <tr><td class="num">24</td><td class="name">희망요양병원</td><td class="num">9 / 2</td><td class="verdict v1">긍정<br>(표본 적음)</td><td class="pos">친절·청결, 좋아요, '성실병원' 인정 언급</td><td class="neg">코로나로 내부 방문(면회) 어려움</td><td class="num"><a class="naver" href="https://map.naver.com/p/entry/place/19528587" target="_blank">지도</a></td></tr>
+    </tbody>
+    <caption>
+      ※ '방문자/블로그'는 네이버 지도에 표시된 리뷰 개수입니다. 요약은 최신순 표시 리뷰 표본 기준이며 전체 리뷰를 모두 반영한 것은 아닙니다.<br>
+      ※ 리뷰는 개인 주관이며 시점에 따라 달라질 수 있습니다. 실제 선택 시 직접 방문·상담을 권장합니다.
+    </caption>
+  </table>
+  </div>
+
+  <script>
+  (function(){
+    var table = document.querySelectorAll('table')[0];
+    if(!table) return;
+    var tbody = table.querySelector('tbody');
+    var headers = table.querySelectorAll('th.sortable');
+    headers.forEach(function(th){
+      th.addEventListener('click', function(){
+        var col = parseInt(th.getAttribute('data-col'), 10);
+        var asc = !th.classList.contains('asc'); // 현재 asc면 다음은 desc
+        // 헤더 상태 초기화
+        headers.forEach(function(h){ h.classList.remove('asc','desc'); });
+        th.classList.add(asc ? 'asc' : 'desc');
+        // 데이터 행(전체평균 avg 제외) 분리
+        var rows = Array.prototype.slice.call(tbody.querySelectorAll('tr'));
+        var avgRow = rows.filter(function(r){ return r.classList.contains('avg'); });
+        var dataRows = rows.filter(function(r){ return !r.classList.contains('avg'); });
+        dataRows.sort(function(a, b){
+          var va = parseFloat(a.cells[col].textContent.replace(/[^\d.]/g,''));
+          var vb = parseFloat(b.cells[col].textContent.replace(/[^\d.]/g,''));
+          if(isNaN(va)) va = asc ? Infinity : -Infinity;
+          if(isNaN(vb)) vb = asc ? Infinity : -Infinity;
+          return asc ? va - vb : vb - va;
+        });
+        dataRows.forEach(function(r){ tbody.appendChild(r); });
+        avgRow.forEach(function(r){ tbody.appendChild(r); }); // 평균행은 항상 맨 아래
+      });
+    });
+  })();
+  </script>
+</body>
+</html>
